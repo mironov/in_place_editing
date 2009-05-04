@@ -35,7 +35,7 @@ module InPlaceMacrosHelper
   # <tt>:script</tt>::            Instructs the in-place editor to evaluate the remote JavaScript response (default: false)
   # <tt>:click_to_edit_text</tt>::The text shown during mouseover the editable text (default: "Click to edit")
   def in_place_editor(field_id, options = {})
-    function =  "new Ajax.InPlaceEditor("
+    function =  "new Ajax.InPlaceEditorWithEmptyText("
     function << "'#{field_id}', "
     function << "'#{url_for(options[:url])}'"
 
