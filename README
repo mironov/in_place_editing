@@ -1,7 +1,20 @@
 InPlaceEditing
 ==============
 
-Example:
+Ajax.InPlaceEditorWithEmptyText based on: http://codetocustomer.com/blog/2008/06/empty-text-for-ajaxinplaceeditor
+
+Installation:
+
+  From your project's RAILS_ROOT, run:
+
+    script/plugin install git://github.com/mironov/in_place_editing.git
+
+  Include in_place_editor_with_empty_text.js in layouts as follows:
+
+	<%= javascript_include_tag :defaults %>
+	<%= javascript_include_tag "in_place_editor_with_empty_text" %>
+
+Usage:
 
   # Controller
   class BlogController < ApplicationController
