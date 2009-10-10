@@ -69,7 +69,7 @@ module InPlaceMacrosHelper
   
   # Renders the value of the specified object and method with in-place editing capabilities.
   def in_place_editor_field(object, method, tag_options = {}, in_place_editor_options = {})
-    instance_tag = ::ActionView::Helpers::InstanceTag.new(object, method, self)
+    instance_tag = ::ActionView::Helpers::InstanceTag.new(object, method, self, tag_options.delete(:object))
     tag_options = {:tag => "span",
                    :id => "#{object}_#{method}_#{instance_tag.object.id}_in_place_editor",
                    :class => "in_place_editor_field"}.merge!(tag_options)
